@@ -1,4 +1,6 @@
-package it.esempijava;
+package it.esempijava.crm.ui;
+
+import it.esempijava.EsempiLista;
 
 public class Application {
 
