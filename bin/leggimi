@@ -3,3 +3,9 @@
 in questo file metto i commenti sul codice
 
 ------- scritto da vincenzo ------------
+
+ sto creando un progetto di esempi
+ ogni esempio avra una costante nella classe lista esempi
+ quando modifico la variabile esempio con una delle costanti della classe esempi lista lo switch mi apre l'esempio
+
+ 
