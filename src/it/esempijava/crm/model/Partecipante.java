@@ -14,6 +14,22 @@ public class Partecipante {
 	private int eta;
 	private String cognome;
 	
+	/* overriding del costruttore di default */
+	public Partecipante() {
+		
+		this.idx = ++counter;
+				
+	}
 	
+	
+	public Partecipante( String nome,  int eta, String cognome) {
+		
+		this();
+		
+		this.nome = nome;
+		
+		this.eta = eta;
+		this.cognome = cognome;
+	}
 
 }
