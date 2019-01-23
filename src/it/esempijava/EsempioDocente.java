@@ -21,8 +21,7 @@ public class EsempioDocente {
 		System.out.println(s + " compenso  € " + s.calcolaCompensoGiornaliero());
 		
 		
-		
-		
+			
 	}
 
 }
