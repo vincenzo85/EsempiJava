@@ -3,7 +3,12 @@ package it.esempijava.crm.model;
 
 public class Studente extends Partecipante {
 	
+	
+	
+	
 	private String matricola;
+	
+
 
 	public String getMatricola() {
 		return matricola;

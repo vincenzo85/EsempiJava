@@ -4,6 +4,7 @@ public class Docente extends Partecipante {
 	
 	private String piva;
 	
+	
 	/* Creo il costruttore della classe (modificandolo) */
 	
 	public Docente(String nome, String cognome, int eta, String email, String piva) {
@@ -16,6 +17,10 @@ public class Docente extends Partecipante {
 		
 	}
 	
+	public Docente() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public String getPiva() {
 		return piva;
 	}

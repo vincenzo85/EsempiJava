@@ -12,6 +12,7 @@ public class EsempiLista {
 	public static final int ESEMPIO_DOCENTE_PARTECIPANTE = 5;
 	public static final int ESEMPIO_CLASSE_ASTRATTA=6;
 	public static final int ESEMPIO_HADLER=7;
+	public static final int ESEMPIO_RICERCA=8;
 
 
 }

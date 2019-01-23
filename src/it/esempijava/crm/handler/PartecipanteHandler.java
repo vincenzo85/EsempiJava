@@ -46,7 +46,7 @@ public class PartecipanteHandler {
 	private static void printPartecipanti (Partecipante[] pList) {
 		
 		for (int i = 0; i < pList.length; i++) {
-			String out = "Nome:" + pList[i].getNome() + " Cognome:"+ pList[i].getCognome();
+		//	String out = "Nome:" + pList[i].getNome() + " Cognome:"+ pList[i].getCognome();
 			System.out.println(pList[i]);
 		}
 		

@@ -5,6 +5,7 @@ import it.esempijava.EsempiPartecipante;
 import it.esempijava.EsempioDocente;
 import it.esempijava.EsempioDocenteStudente;
 import it.esempijava.EsempioHandler;
+import it.esempijava.EsempioRcerca;
 import it.esempijava.EsempioStudente;
 
 
@@ -14,7 +15,7 @@ public class Application {
 		
 		/* Cambiando il right value di Esempio lo switch case attiva il relativo metodo dell'esempio */
 		
-		int Esempio = EsempiLista.ESEMPIO_HADLER;
+		int Esempio = EsempiLista.ESEMPIO_RICERCA;
 		
 		
 		switch (Esempio) {
@@ -59,6 +60,12 @@ public class Application {
 		case EsempiLista.ESEMPIO_HADLER:
 			
 			EsempioHandler.EsempioHandlerDocente();
+			
+			break;
+		
+		case EsempiLista.ESEMPIO_RICERCA:
+			
+			EsempioRcerca.Ricerca();
 			
 			break;
 		
