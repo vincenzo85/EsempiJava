@@ -1,6 +1,6 @@
 package it.esempijava;
 
-import it.esempijava.crm.model.Partecipante;
+
 
 public class EsempiLista {
 	
@@ -9,6 +9,7 @@ public class EsempiLista {
 	public static final int ESEMPIO_EQUALS = 2;
 	public static final int ESEMPIO_STUDENTE = 3;
 	public static final int ESEMPIO_DOCENTE = 4;
+	public static final int ESEMPIO_DOCENTE_PARTECIPANTE = 5;
 
 
 }

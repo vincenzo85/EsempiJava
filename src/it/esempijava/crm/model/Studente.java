@@ -13,19 +13,34 @@ public class Studente extends Partecipante {
 		this.matricola = matricola;
 	}
 
-	public Studente(String nome, String email, int eta, String cognome, String matricola) {
+	public Studente() {
 		
 		
-		super(nome, eta, cognome);
+	
 		
 		System.out.println("Sono dentro la classe Studente, Richiamo il costruttore della classe padre Partecipante");
 	
-		this.matricola = matricola;
+		
 		
 		System.out.println("Aggiungo matricola alla variabile di instanza");
 		
 		
 	}
+	
+	public Studente(String nome, String cognome, String email, int eta, String matricola) {
+		
+		
+		
+		super(nome, email, eta, cognome);
+		
+		
+		
+		this.matricola = matricola;
+		
+		
+		
+	}
+	
 	public String  toString() {
 		return super.toString() + ", Matricola:" + matricola;
 	}
