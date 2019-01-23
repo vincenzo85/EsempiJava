@@ -80,6 +80,13 @@ public class Partecipante {
 		this.cognome = cognome;
 	}
 	
+	public Partecipante(String nome, String email, int eta, String cognome) {
+		this(nome, eta, cognome);
+	
+		this.email = email;
+	
+	}
+	
 	public void init() {
 		System.out.println("CHIAMO INIT PER AUMENTARE Idx COSI' SO CHE NUMERO DI INSTANZE HO APERTO");
 		this.idx = ++counter;
