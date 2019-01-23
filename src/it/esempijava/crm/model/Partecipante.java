@@ -20,6 +20,15 @@ public abstract class Partecipante {
 	
 	/* getter e setter */
 	
+	static {
+		/* esegue eventuali blocchi statichi per la prima volta */
+		
+		/* variabili e metodi statici */
+		System.out.println("Sono dentro al metodo static che si avvia una sola volta");
+		
+		counter = 100; 
+	}
+	
 	public String getNome() {
 		return nome;
 	}

@@ -1,7 +1,7 @@
 package it.esempijava;
 
 import it.esempijava.crm.handler.PartecipanteHandler;
-import it.esempijava.crm.model.Partecipante;
+
 
 
 public class EsempioHandler {
