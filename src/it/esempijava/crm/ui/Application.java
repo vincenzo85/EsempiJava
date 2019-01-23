@@ -2,6 +2,7 @@ package it.esempijava.crm.ui;
 
 import it.esempijava.EsempiLista;
 import it.esempijava.EsempiPartecipante;
+import it.esempijava.EsempioStudente;
 import it.esempijava.crm.model.Partecipante;
 
 public class Application {
@@ -10,7 +11,7 @@ public class Application {
 		
 		/* Cambiando il right value di Esempio lo switch case attiva il relativo metodo dell'esempio */
 		
-		int Esempio = EsempiLista.ESEMPIO_EQUALS;
+		int Esempio = EsempiLista.ESEMPIO_STUDENTE;
 		
 		
 		switch (Esempio) {
@@ -31,6 +32,13 @@ public class Application {
 		
 			
 			EsempiPartecipante.EsempioEquals();
+		
+			break;
+			
+		case EsempiLista.ESEMPIO_STUDENTE:
+		
+			
+			EsempioStudente.istanzioStudente();
 		
 			break;
 		
