@@ -18,11 +18,11 @@ public class Studente extends Partecipante {
 		
 		super(nome, eta, cognome);
 		
-		System.out.println("Richiamo il costruttore della classe padre");
+		System.out.println("Sono dentro la classe Studente, Richiamo il costruttore della classe padre Partecipante");
 	
 		this.matricola = matricola;
 		
-		System.out.println("Aggiungo matrica alla variabile di instanza");
+		System.out.println("Aggiungo matricola alla variabile di instanza");
 		
 		
 	}
