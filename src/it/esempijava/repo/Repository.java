@@ -14,7 +14,7 @@ public class Repository {
 		
 		for (int i = 0; i < utentiTable.length; i++) {
 			Utente u = new Utente(i, "user"+i, "pwd"+i);
-			
+			utentiTable[i]=u;
 		}
 	}
 	
