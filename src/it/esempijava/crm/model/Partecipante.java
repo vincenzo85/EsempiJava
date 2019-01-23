@@ -63,19 +63,27 @@ public class Partecipante {
 	/* overriding del costruttore di default */
 	
 	public Partecipante() {
+		System.out.println("Chiamo il costruttore senza argomenti di Partecipante");
+		init();
 		
-		this.idx = ++counter;
 				
 	}
 	
 	/* costruttore con firma diversa */
 	public Partecipante( String nome,  int eta, String cognome) {
-		
 		this();
+		System.out.println("Chiamo il costruttore con gli argomenti");
+		System.out.println("Chiamo anche il costruttore senza argomenti che potrebbe avere un init");
 		
 		this.nome = nome;
 		this.eta = eta;
 		this.cognome = cognome;
+	}
+	
+	public void init() {
+		System.out.println("CHIAMO INIT PER AUMENTARE Idx COSI' SO CHE NUMERO DI INSTANZE HO APERTO");
+		this.idx = ++counter;
+		System.out.println("STAMPO IDX: " + idx);
 	}
 	
 	/**
