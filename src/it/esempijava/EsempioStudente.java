@@ -11,7 +11,8 @@ public class EsempioStudente {
 		String cognome = "Dell'Aria";
 		String matricola ="09345";
 		
-		Studente s = new Studente(nome, email, eta, cognome, matricola);
+		Studente s = new Studente(nome, cognome, email, eta, matricola);
+		
 		
 		System.out.println("Sto stampando studente utilizzando il metodo toString di cui ho fatto l'override");
 		System.out.println(s);

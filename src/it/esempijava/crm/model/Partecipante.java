@@ -1,7 +1,7 @@
 package it.esempijava.crm.model;
 
 
-public class Partecipante {
+public abstract class Partecipante {
 	
 	/**
 	 *  variabile di instanza, caratterizzano lo stato della classe ;
@@ -147,7 +147,7 @@ public class Partecipante {
 		return false;
 	}
 	
-	
+	public abstract double calcolaCompensoGiornaliero();
 	
 
 }

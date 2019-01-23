@@ -1,8 +1,9 @@
 package it.esempijava;
 
 import it.esempijava.crm.model.Partecipante;
+import it.esempijava.crm.model.Studente;
 
-public class EsempiPartecipante {
+public abstract class EsempiPartecipante {
 	
 	public static void EsempioEquals() {
 		/* creo due partecipanti*/
@@ -10,7 +11,7 @@ public class EsempiPartecipante {
 		
 		System.out.println("Creo e stampo i due partecipanti");
 		
-		Partecipante p = new Partecipante();
+		Partecipante p = new Studente();
 		
 		p.setNome("vincenzo");
 		p.setCognome("di franco");
@@ -20,7 +21,7 @@ public class EsempiPartecipante {
 		
 		System.out.println(p);
 		
-		Partecipante p2 = new Partecipante();
+		Partecipante p2 = new Studente();
 		
 		p2.setNome("marco");
 		p2.setCognome("lombardo");
@@ -66,7 +67,7 @@ public class EsempiPartecipante {
 		
 		/* ISTANZIO PARTECIPANTE CON E SETTO LE VARIABILI CON IL METODO SET */
 	
-		Partecipante p = new Partecipante();
+		Partecipante p = new Studente();
 		
 		p.setNome("vincenzo");
 		p.setCognome("di franco");
@@ -78,5 +79,7 @@ public class EsempiPartecipante {
 		
 	
 	}
+	
+	public abstract double calcolaCompensoGiornaliero();
 
 }

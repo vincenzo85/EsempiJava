@@ -45,4 +45,10 @@ public class Studente extends Partecipante {
 		return super.toString() + ", Matricola:" + matricola;
 	}
 
+	@Override
+	public double calcolaCompensoGiornaliero() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }

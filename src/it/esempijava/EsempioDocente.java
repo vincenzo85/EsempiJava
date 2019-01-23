@@ -15,6 +15,14 @@ public class EsempioDocente {
 		
 		System.out.println("Sto stampando docente utilizzando il metodo toString di cui ho fatto l'override");
 		System.out.println(s);
+		
+		System.out.println("Sto stampando docente utilizzando il metodo calcola compenso giornaliero della classe astratta Partecipante");
+		
+		System.out.println(s + " compenso  € " + s.calcolaCompensoGiornaliero());
+		
+		
+		
+		
 	}
 
 }

@@ -1,6 +1,7 @@
 package it.esempijava;
 
 import it.esempijava.crm.model.Partecipante;
+import it.esempijava.crm.model.Studente;
 
 public class EsempioPartecipanteEquals {
 	
@@ -9,7 +10,7 @@ public class EsempioPartecipanteEquals {
 		
 		/* ISTANZIO PARTECIPANTE CON E SETTO LE VARIABILI CON IL METODO SET */
 	
-		Partecipante p = new Partecipante();
+		Partecipante p = new Studente();
 		
 		p.setNome(nome);
 		p.setCognome(cognome);

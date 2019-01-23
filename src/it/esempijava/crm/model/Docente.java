@@ -29,6 +29,12 @@ public class Docente extends Partecipante {
 	public String  toString() {
 		return super.toString() + ", Partita iva: " + piva;
 	}
+
+	@Override
+	public double calcolaCompensoGiornaliero() {
+		// TODO Auto-generated method stub
+		return 1000*8;
+	}
 	
 	
 
