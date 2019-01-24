@@ -11,6 +11,12 @@ public class AppPrinter {
 
 	public static void main(String[] args) {
 		
+		/* interfaccia mi permette di blindare i metodi di ConsolePrinter, cosi non posso instanziarne i metodi in maniera impropria */
+		ConsolePrinter cp = new ConsolePrinter();
+		cp.metodopub();
+	//	cp.metodononpub();
+		
+		/* questo metodo non publico non può essere usato, cosi non faccio danni */
 		int printerType = 0;
 		
 		new Repository();
