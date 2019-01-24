@@ -25,6 +25,12 @@ public class PrinterBuilder {
 			
 			break;
 			
+		case 2:
+			
+			printer = new XlsPrinter();
+			
+			break;
+			
 			
 		}
 	
