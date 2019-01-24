@@ -21,5 +21,20 @@ public class UtentiHandler {
 		
 		return false;
 	}
+	
+	public Utente findUtenteBuusername (String username) {
+		Utente retUser = null;
+		
+		Utente [] tahle = Repository.getUtentiTable();
+		for (Utente utente : tahle) {
+			if (username.equals(utente.getUsername())) {
+				retUser = utente;
+				break;
+			}
+		}
+		
+		return retUser;
+		
+	}
 
 }
