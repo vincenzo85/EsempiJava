@@ -16,14 +16,14 @@ public class Client {
 		@Override
 		public void onCompleteFailure() {
 			// TODO Auto-generated method stub
-			System.out.println("tutto ok");
+			System.out.println("non bene");
 		}
 		
 		@Override
 		public void onClompleteSuccess() {
 			// TODO Auto-generated method stub
 			
-			System.out.println("non bene");
+			System.out.println("tutto bene");
 			
 		}
 	};
@@ -31,7 +31,7 @@ public class Client {
 	public void executeTask() {
 		
 		
-		
+		System.out.println("Chiamo SyncWorkerImpl");
 		
 		
 		SyncWorkerImpl w = new SyncWorkerImpl();

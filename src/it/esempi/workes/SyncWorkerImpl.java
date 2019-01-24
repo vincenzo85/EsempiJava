@@ -8,8 +8,10 @@ public class SyncWorkerImpl implements Worker {
 	public void execute() {
 		boolean isOk=true;
 		if(isOk) {
+			System.out.println("Ti richiamo per succ");
 			this.wListener.onClompleteSuccess();
 		} else {
+			System.out.println("Ti richiamo per fail");
 			this.wListener.onCompleteFailure();
 		}
 

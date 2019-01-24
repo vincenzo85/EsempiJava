@@ -8,6 +8,8 @@ public class EsempioInversione {
 		// TODO Auto-generated method stub
 		 
 		Client c = new Client();
+		
+		System.out.println("Chiamo CLIENT");
 		c.executeTask();
 
 	}
