@@ -13,8 +13,7 @@ public class SyncWorkerImpl implements Worker {
 			isOk=false;
 		}
 		
-		
-		
+				
 		
 		if(isOk) {
 			System.out.println("Ti richiamo per succ");
