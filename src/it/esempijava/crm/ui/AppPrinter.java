@@ -25,21 +25,22 @@ public class AppPrinter {
 		//	ConsolePrinter cp = new ConsolePrinter();
 			printer = new ConsolePrinter();
 			/* Reference di tipo printer con un costruttore ConsolePrinter   */
-			printer.print(data);
+		
 			
 			break;
 			
 		case 1:
 			
 			printer = new TxtPrinter();
-			printer.print(data);
+			
 			break;
 			
 		default: 
 			System.out.println("Formato di stampa non supportato");
 			
 		}
-		
+		// non mi interessa sapere su quale printer lo sto chiamando, gli interessa selezionare il printer giusto in base al tipo 
+		printer.print(data);
 		
 		
 
