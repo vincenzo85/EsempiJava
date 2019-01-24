@@ -6,7 +6,16 @@ public class SyncWorkerImpl implements Worker {
 
 	@Override
 	public void execute() {
+		
 		boolean isOk=true;
+		
+		if(Math.random()<=0.5) {
+			isOk=false;
+		}
+		
+		
+		
+		
 		if(isOk) {
 			System.out.println("Ti richiamo per succ");
 			this.wListener.onClompleteSuccess();
