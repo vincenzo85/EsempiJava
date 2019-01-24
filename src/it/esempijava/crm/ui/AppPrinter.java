@@ -15,7 +15,7 @@ public class AppPrinter {
 		new Repository();
 		Utente[] data = Repository.getUtentiTable();
 		
-		
+		Printer printer = null;
 		
 		
 		
@@ -23,16 +23,16 @@ public class AppPrinter {
 		
 		case 0:
 		//	ConsolePrinter cp = new ConsolePrinter();
-			Printer cp = new ConsolePrinter();
+			printer = new ConsolePrinter();
 			/* Reference di tipo printer con un costruttore ConsolePrinter   */
-			cp.print(data);
+			printer.print(data);
 			
 			break;
 			
 		case 1:
 			
-			Printer tp = new TxtPrinter();
-			tp.print(data);
+			printer = new TxtPrinter();
+			printer.print(data);
 			break;
 			
 		default: 
