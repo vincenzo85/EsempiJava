@@ -1,6 +1,9 @@
 package it.esempijava.crm.model;
 
-public class Utente {
+import it.esempi.gestoreutenti.UtenteR;
+import it.esempi.gestoreutenti.UtenteW;
+
+public class Utente implements UtenteR, UtenteW {
 	
 	private String username;
 	private String password;
@@ -24,6 +27,16 @@ public class Utente {
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	@Override
+	public void setID(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	public int getId() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 	
 	
