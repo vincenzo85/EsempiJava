@@ -2,6 +2,8 @@ package it.esempi.interfacce;
 
 public class PrinterBuilder {
 	
+
+	
 	/* Questa classe deve fare lo switch del bottone per restituirgli l'instanza corretta*/
 	
 	/* che tipo restituisce il tipo printer */
@@ -13,7 +15,7 @@ public class PrinterBuilder {
 		
 		case 0:
 		//	ConsolePrinter cp = new ConsolePrinter();
-			printer = new ConsolePrinter();
+			printer = new ConsolePrinterFriendly();
 			/* Reference di tipo printer con un costruttore ConsolePrinter   */
 		
 			
@@ -21,7 +23,7 @@ public class PrinterBuilder {
 			
 		case 1:
 			
-			printer = new TxtPrinter();
+			printer = new ConsolePrinterNonFreindly();
 			
 			break;
 			
