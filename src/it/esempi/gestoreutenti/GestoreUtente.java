@@ -8,10 +8,10 @@ public class GestoreUtente {
 	 * 
 	 */
 	public UtenteR getUtenteInSolaLettura() {
-		return (UtenteR) new Utente(10,"admin", "admin");
+		return  new Utente(10,"admin", "admin");
 	}
 	public UtenteW getUtenteInSolaScrittura() {
-		return (UtenteW) new Utente(10,"admin", "admin");
+		return  new Utente(10,"admin", "admin");
 	}
 
 }

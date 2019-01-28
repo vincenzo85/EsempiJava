@@ -16,15 +16,40 @@ public class TestEccezioni {
 		try {
 				int id = u.getId();
 				
+				/* ipotesi di lavoro */
+				
+				/* apro connessione */
+				/* usa la connessione */
+				/* chiudo la connessione */
+				
 		} catch(NullPointerException npe) {
 			
 			System.err.println("Sono in null pointer");
 			npe.printStackTrace();
-			
-			
+					
 		}
 		
 		System.out.println("adesso faccio altro");
+		
+		
+		try {
+			int id = u.getId();
+			
+	    } catch(Exception e) {
+		
+		System.err.println("invia la pagina di errore ");
+		e.printStackTrace();
+				
+	    } finally {
+	    	
+	    	
+	    System.out.println("ADESSO HO IL CONTROLLO DELLA SITUAZIONE IO E TI RESETTO TUTTO");
+	    
+	    /* chiudi la connessione */
+	    	
+	    }
+	
+	System.out.println("adesso faccio altro");
 
 		
 		
