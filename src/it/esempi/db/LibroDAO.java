@@ -124,4 +124,43 @@ public class LibroDAO {
 		
 	}
 	
+	
+	
+	
+	//INSERT INTO `corso_java`.`libro` (`isbn`, `titolo`, `id_autore`, `costo`) VALUES ('0923480958', 'Corso', '2', '400');
+	
+	public int InsertLibro(Libro l) throws SQLException {
+		int U=0;
+		Connection con= null;
+		
+		try {
+			con = DatabaseUtils.openMySqlConnection();
+			String query = "INSERT INTO `corso_java`.`libro` (`isbn`, `titolo`, `id_autore`, `costo`) VALUES (?, ?, ?, ?);";
+			PreparedStatement stmt = con.prepareStatement(query);
+			stmt.setString(1, l.getIsbn());
+			stmt.setString(2, l.getTitolo());
+			Autore au = l.getA();
+			stmt.setLong(3, au.getId());
+			stmt.setDouble(4, l.getCosto());
+			U = stmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			if(con != null)
+				con.close();
+			
+		}
+		
+		
+			
+		
+		
+		return U;
+	}
+	
+	
+	
+	
 }

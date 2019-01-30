@@ -57,12 +57,20 @@ public class db {
 //			e.printStackTrace();
 //		}
 //		
-		
+		Libro l = new Libro();
 		LibroDAO Ldao = new LibroDAO();
 		try {
-			Libro l = new Libro();
+			
 			l=Ldao.findById(2l);
 			System.out.println(l.getA()+ " ISBN : '" + l.getIsbn() + "'"+ " Costo : '" + l.getCosto() + " €'");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		try {
+			l.setTitolo("titolo di testo");
+			System.out.println("Inserito "+Ldao.InsertLibro(l)+ " record");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
