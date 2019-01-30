@@ -3,9 +3,11 @@ package it.esempi.db;
 import java.sql.SQLException;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Scanner;
 
 import it.esempi.db.model.Autore;
 import it.esempi.db.model.Libro;
+import it.esempi.eccezioni.Eccezioni;
 
 public class db {
 	
@@ -76,7 +78,54 @@ public class db {
 			e.printStackTrace();
 		}
 		
+		
+		scegliAutore();
+		
 	}
+	
+	
+	
+	private static int scegliAutore() {
+		Autore aut = null;
+		Long selectedId = null;
+		System.out.println("Selezionare autore tra: ");
+		AutoreDao ad = new AutoreDao();
+		List<Autore> authList = ad.findAll();
+		for (Autore autore : authList) {
+			System.out.print(autore);
+			System.out.println(".............");
+		}
+		Long ida = null;
+		Scanner scanner = new Scanner(System.in);
+		do {
+		try {
+			System.out.println("inserisci un id dell'autore");
+			String id = scanner.nextLine();
+			
+			ida = Long.parseLong(id);
+			
+			AutoreDao Ad = new AutoreDao();
+			aut = Ad.findById(ida);
+			if(aut == null) {
+			System.out.println("Non esiste l'autore " + ida);
+			throw new Exception();
+		}
+		} catch (Exception e) {
+			System.out.println("Id non valido per autore");
+		}
+		}while(ida==null);
+		
+		scanner.close();
+		
+		// verifica se id c'è;
+		
+		
+		return aut.getId();
+		
+		
+		
+	}
+	
 
 	
 

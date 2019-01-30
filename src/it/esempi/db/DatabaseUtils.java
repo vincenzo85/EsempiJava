@@ -16,7 +16,7 @@ public class DatabaseUtils {
 		try {
 			
 			cfg = new ConfigPropertyLoader();
-			System.out.println(cfg.readProperty(cfg.DRIVER));
+//			System.out.println(cfg.readProperty(cfg.DRIVER));
 			Class.forName(cfg.readProperty(cfg.DRIVER));
 			
 			

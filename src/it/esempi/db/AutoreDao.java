@@ -2,12 +2,14 @@ package it.esempi.db;
 
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import it.esempi.db.model.Autore;
+import it.esempi.db.model.Libro;
 
 public class AutoreDao {
 	
@@ -42,6 +44,54 @@ public class AutoreDao {
 		}
 		
 		return retList;
+	}
+	
+	
+	// SELECT * FROM corso_java.autore where id=1
+	
+public Autore findById(Long id) throws SQLException {
+		
+		Autore retAutore = null;
+		Connection con = null;
+		
+		try {
+			con = DatabaseUtils.openMySqlConnection();
+			String query = "SELECT id, nome, cognome FROM corso_java.autore where id=?";
+			
+			PreparedStatement stmt = con.prepareStatement(query);
+			stmt.setLong(1, id);
+			ResultSet rs = stmt.executeQuery();
+			
+			// while è inutile if è meglio ... c'è ne solo uno
+			
+			if(rs.next()) {
+				retAutore = new Autore();
+				
+				
+				retAutore.setId(rs.getInt("id"));
+				retAutore.setCognome(rs.getString("cognome"));
+				retAutore.setNome(rs.getString("nome"));
+				
+				
+			}else {
+				/* LANCIA ECCEZIONE */
+			}
+			
+			
+			
+			
+			
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			con.close();
+		}
+		
+		return retAutore;
+		
+		
 	}
 	
 }

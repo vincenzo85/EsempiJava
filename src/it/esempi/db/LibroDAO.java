@@ -136,13 +136,17 @@ public class LibroDAO {
 		try {
 			con = DatabaseUtils.openMySqlConnection();
 			String query = "INSERT INTO `corso_java`.`libro` (`isbn`, `titolo`, `id_autore`, `costo`) VALUES (?, ?, ?, ?);";
-			PreparedStatement stmt = con.prepareStatement(query);
+			PreparedStatement stmt = con.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
 			stmt.setString(1, l.getIsbn());
 			stmt.setString(2, l.getTitolo());
 			Autore au = l.getA();
 			stmt.setLong(3, au.getId());
 			stmt.setDouble(4, l.getCosto());
 			U = stmt.executeUpdate();
+			ResultSet rs = stmt.getGeneratedKeys();
+			if(rs.next()) {
+			System.out.println(rs.getInt(1));
+			}
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
