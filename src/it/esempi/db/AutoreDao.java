@@ -28,7 +28,7 @@ public class AutoreDao {
 			retList = new ArrayList<>();
 		
 		while(rs.next()) {
-			
+			System.out.println(rs);
 			Autore au = new Autore();
 			au.setId(rs.getInt("id"));
 			au.setNome(rs.getString("nome"));

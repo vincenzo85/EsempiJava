@@ -1,6 +1,6 @@
 package it.esempi.db.model;
 
-public class Libro {
+public class Libro implements Biblioteca{
 	
 	private long id;
 	private String isbn;
@@ -9,6 +9,12 @@ public class Libro {
 	private float costo;
 	private int version;
 	
+	public Libro() {
+		this.a = new Autore();
+	}
+	
+	
+
 	
 	
 	public long getId() {
@@ -47,6 +53,13 @@ public class Libro {
 	}
 	public void setVersion(int version) {
 		this.version = version;
+	}
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "LIBRO ID:" + id + "NOME: " + isbn + "COGNOME: " + titolo 
+				+ a.toString() ; 
 	}
 	
 	
