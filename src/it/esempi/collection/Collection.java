@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import it.esempi.db.model.Libro;
+
 public class Collection {
 
 	public static void main(String[] args) {
@@ -11,6 +13,8 @@ public class Collection {
 
 		lista();
 		listaStringhe();
+		
+		
 		
 		
 	}
